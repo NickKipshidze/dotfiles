@@ -1,53 +1,73 @@
-/* ________________________________________________________ */
-/*    _______ _  __    ____               _   ___      __   */
-/*   <  / __ \ |/ /   / __ \___ _   __   / | / (_)____/ /__ */
-/*   / / / / /   /   / / / / _ \ | / /  /  |/ / / ___/ //_/ */
-/*  / / /_/ /   |   / /_/ /  __/ |/ /  / /|  / / /__/ ,<    */
-/* /_/\____/_/|_|  /_____/\___/|___/  /_/ |_/_/\___/_/|_|   */
-/* ________________________________________________________ */
-
 window {
-	margin: 5px;
-	background-color: rgba(0, 0, 0, 0.9);
+	margin: 0px;
 	border-radius: 10px;
-	font-family: Hermit;
-	font-size: 13px;
+	font-family: monospace;
+
+	background:
+		linear-gradient(#44475a, #44475a) padding-box,
+		linear-gradient(
+			45deg,
+			rgba(51, 204, 255, 0.93),
+			rgba(0, 255, 153, 0.93)
+		) border-box;
+
+	border: 1px solid transparent;
 }
 
 #input {
-	color: #ffffff;
-	background-color: #303030;
-	border: 1px solid #404040;
-	border-radius: 10px;
 	margin: 5px;
+	border: none;
+	color: #f8f8f2;
+	border-radius: 10px;
+	background-color: #44475a;
 }
 
 #inner-box {
-	border-radius: 3px 3px 3px 3px;
-	background-color: #303030;
-	border: 1px solid #404040;
+	margin: 5px;
+	border: none;
 	border-radius: 10px;
+	background-color: #21252b;
 }
 
 #outer-box {
 	margin: 5px;
+	border: none;
 	border-radius: 10px;
-	overflow: hidden;
+	background-color: #282a36;
 }
 
 #scroll {
-	margin: 5px;
+	margin: 0px;
+	border: none;
 }
 
 #text {
 	margin: 5px;
-	color: #e1f2f5;
+	border: none;
+	color: #f8f8f2;
 }
 
-#entry {
+#entry.activatable #text {
+	color: #282a36;
+}
+
+#entry>*>#img:first-child{
+	margin-left: 16px;
+}
+
+#entry>* {
+	color: #f8f8f2;
+}
+
+#entry:selected {
 	border-radius: 10px;
+	background-color: #44475a;
 }
 
-#entry > * {
-	background-color: #303030;
+#entry:selected #text {
+	font-weight: bold;
+}
+
+#img {
+	opacity: 1;
 }
