@@ -114,7 +114,7 @@ style = "Regula"
 [window]
 decorations = "Full"
 dynamic_title = false
-opacity = 0.5
+opacity = 0.75
 
 [window.padding]
 x = 5
