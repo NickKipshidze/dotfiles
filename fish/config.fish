@@ -1,14 +1,4 @@
-## ________________________________________________________
-##    _______ _  __    ____               _   ___      __
-##   <  / __ \ |/ /   / __ \___ _   __   / | / (_)____/ /__
-##   / / / / /   /   / / / / _ \ | / /  /  |/ / / ___/ //_/
-##  / / /_/ /   |   / /_/ /  __/ |/ /  / /|  / / /__/ ,<
-## /_/\____/_/|_|  /_____/\___/|___/  /_/ |_/_/\___/_/|_|
-## ________________________________________________________
-
-#
 # ~/.config/fish/config.fish
-#
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
@@ -35,6 +25,7 @@ if status is-interactive
 	alias ll="exa -Ralh"
 	alias pacdate="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n 20"
 	alias grep="grep --color=auto"
+	alias xterm="xterm -bg black -fg white"
 end
 	
 function fish_prompt
@@ -47,7 +38,13 @@ end
 #end
 
 function fish_greeting
-	python nsplash.py
+	python ~/Documents/nsplash/nsplash.py
 end
 
 fish_add_path -m ~/.local/bin
+export fish_color_command="blue"
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+source /opt/miniconda3/etc/fish/conf.d/conda.fish
