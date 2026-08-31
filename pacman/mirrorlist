@@ -1,15 +1,14 @@
-## ________________________________________________________
-##    _______ _  __    ____               _   ___      __
-##   <  / __ \ |/ /   / __ \___ _   __   / | / (_)____/ /__
-##   / / / / /   /   / / / / _ \ | / /  /  |/ / / ___/ //_/
-##  / / /_/ /   |   / /_/ /  __/ |/ /  / /|  / / /__/ ,<
-## /_/\____/_/|_|  /_____/\___/|___/  /_/ |_/_/\___/_/|_|
-## ________________________________________________________
-
 ##
 ## Arch Linux repository mirrorlist
 ## Generated on 2023-02-03
 ##
+
+## United Arab Emirates
+Server = https://mirror.hafeezh.com/archlinux/$repo/os/$arch
+
+## Saudi Arabia
+Server = https://sa.mirrors.cicku.me/archlinux/$repo/os/$arch
+Server = https://mirror.maeen.sa/arch-mirror/$repo/os/$arch
 
 ## Georgia
 Server = http://archlinux.grena.ge/$repo/os/$arch
@@ -42,4 +41,3 @@ Server = https://mirror.yal.sl-chat.ru/archlinux/$repo/os/$arch
 Server = http://mirror.yandex.ru/archlinux/$repo/os/$arch
 Server = https://mirror.yandex.ru/archlinux/$repo/os/$arch
 Server = http://archlinux.zepto.cloud/$repo/os/$arch
-
