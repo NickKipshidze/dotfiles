@@ -1,45 +1,57 @@
 {
     "window.titleBarStyle": "custom",
-
     "editor.fontFamily": "Hurmit Nerd Font Mono",
     "editor.cursorStyle": "underline",
     "editor.unicodeHighlight.nonBasicASCII": false,
     "editor.unicodeHighlight.invisibleCharacters": false,
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.wordWrap": "on",
-
+    "python.languageServer": "Pylance",
+    "python.analysis.extraPaths": [
+        "./.venv/lib/python3.12/site-packages",
+        "./.venv/lib/python3.12/site-packages/tensorflow",
+        "./.venv/lib/python3.12/site-packages/tensorflow/keras"
+    ],
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    "python.analysis.useLibraryCodeForTypes": true,
+    "python.autoComplete.extraPaths": [
+        "./.venv/lib/python3.12/site-packages",
+        "./.venv/lib/python3.12/site-packages/tensorflow",
+        "./.venv/lib/python3.12/site-packages/tensorflow/keras"
+    ],
     "[python]": {
         "editor.rulers": [
-            {"column": 79, "color": "#38320b"}, 
-            {"column": 72, "color": "#294626"}
+            {
+                "column": 79,
+                "color": "#38320b"
+            },
+            {
+                "column": 72,
+                "color": "#294626"
+            }
         ]
     },
     "editor.rulers": [
-        {"column": 79, "color": "#494949"}
+        {
+            "column": 79,
+            "color": "#494949"
+        }
     ],
-    
-    "workbench.colorTheme": "One Dark Pro Darker",
     "workbench.startupEditor": "none",
     "workbench.colorCustomizations": {
         "statusBar.foreground": "#ffffff",
-        "statusBar.background": "#1A1A1A", 
-        "statusBar.noFolderBackground": "#212121", 
+        "statusBar.background": "#1A1A1A",
+        "statusBar.noFolderBackground": "#212121",
         "statusBar.debuggingBackground": "#263238"
     },
-    
     "files.autoSave": "onFocusChange",
-
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-
     "liveServer.settings.donotVerifyTags": true,
     "liveServer.settings.fullReload": true,
-
     "html.format.indentInnerHtml": true,
     "html.format.extraLiners": "",
-    
     "css.lint.unknownAtRules": "ignore",
-    
     "files.exclude": {
         "**/.DS_Store": false,
         "**/.git": false,
@@ -48,10 +60,51 @@
         "**/CVS": false,
         "**/Thumbs.db": false
     },
-
     "emmet.includeLanguages": {
         "django-html": "html"
     },
-    
-    "extensions.ignoreRecommendations": true
+    "extensions.ignoreRecommendations": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "python": true,
+        "css": true
+    },
+    "security.workspace.trust.startupPrompt": "never",
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmPasteNative": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "jupyter.askForKernelRestart": false,
+    "git.openRepositoryInParentFolders": "never",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "editor.multiCursorLimit": 100000,
+    "C_Cpp.default.includePath": [
+        "${default}",
+        "/usr/include",
+        "/usr/include/*",
+        "/usr/include/**",
+        "${workspaceFolder}/include",
+        "/opt/glad/include"
+    ],
+    "C_Cpp.default.systemIncludePath": [
+        "${default}",
+        "/usr/include",
+        "/usr/include/*",
+        "/usr/include/**",
+        "${workspaceFolder}/include"
+    ],
+    "terminal.integrated.inheritEnv": false,
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+    "python.defaultInterpreterPath": "/sbin/python3.14",
+    "terminal.integrated.suggest.enabled": false,
+    "workbench.colorTheme": "One Dark Pro Darker"
 }
