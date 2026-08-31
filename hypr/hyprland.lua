@@ -1,3 +1,5 @@
+-- https://github.com/end-4/dots-hyprland/blob/main/dots/.config/hypr/hyprland.lua
+
 hl.env("WLR_NO_HARDWARE_CURSORS", "1")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
@@ -43,7 +45,7 @@ hl.config({
             active_border = "rgba(33ccffee)",
             inactive_border = "rgba(595959aa)"
         },
-        resize_on_border = true,
+        resize_on_border = false,
 
         no_focus_fallback = true,
         allow_tearing = true,
@@ -92,8 +94,8 @@ hl.config({
     },
     dwindle = {
         preserve_split = true,
-        smart_split = false,
-        smart_resizing = false
+        smart_split = true,
+        smart_resizing = true
     }
 })
 
@@ -139,7 +141,7 @@ hl.config({
         allow_session_lock_restore = true,
         session_lock_xray = true,
         initial_workspace_tracking = false,
-        focus_on_activate = true
+        focus_on_activate = false
     },
 
     binds = {
@@ -311,11 +313,10 @@ local mainMod = "SUPER"
 
 hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd("alacritty"))
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.window.close())
-hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("hyprctl dispatch exit"))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("nautilus"))
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("wofi --show drun"))
-hl.bind(mainMod .. " + P", hl.dsp.layout("pseudo"))
+hl.bind(mainMod .. " + P", hl.dsp.window.pseudo({ action = "set" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("pactl set-sink-mute @DEFAULT_SINK@ toggle"))
@@ -374,7 +375,7 @@ for i = 1, 10 do
         mainMod .. " + SHIFT + " .. key,
         hl.dsp.window.move({
             workspace = i,
-            follow = false
+            follow = true
         })
     )
 end
