@@ -7,45 +7,112 @@
 
 #waybar {
     color: #ffffff;
-    background: #212530;
-    border-radius: 10px;
+    background: #161515;
+}
+
+window#waybar.curves {
+    background: transparent;
+}
+
+window#waybar.curves #custom-left-curve,
+window#waybar.curves #custom-right-curve {
+    min-width: 25px;
+    min-height: 25px;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+}
+
+/* Left side */
+window#waybar.curves #custom-left-curve {
+    background-image: url("/home/archnick/.config/waybar/corner-left.svg");
+    background-position: left top;
+}
+
+/* Right side */
+window#waybar.curves #custom-right-curve {
+    background-image: url("/home/archnick/.config/waybar/corner-right.svg");
+    background-position: right top;
 }
 
 #workspaces {
-    margin: 0 15px;
+    margin: 5px 15px;
+    padding: 1px 2px;
+    background: #1C1B1C;
+    border-radius: 10px;
 }
 
 #workspaces button {
-    padding: 5px 10px 0px 10px;
-    color: #d8d8d8;
-    background: rgba(0, 0, 0, 0.0);
-    border-bottom: 5px solid rgba(0, 0, 0, 0);
-    border-radius: 0;
+    min-width: 28px;
+    min-height: 28px;
+    margin: 0 1px;
+    padding: 0;
+    color: #535055;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    font-size: 13px;
+    transition: background-color 256ms ease, color 256ms ease;
 }
 
 #workspaces button.active {
-    background: rgba(121, 123, 134, 0.2);
-    border-bottom: 5px solid rgba(131, 132, 133, 0.8);
+    color: #E1DBDE;
+    background: #393839;
 }
 
-#mode, #battery, #cpu, #memory, #network, #pulseaudio, #backlight, #custom-storage, #clock, #temperature, #disk {
-    margin: 4px 0px;
+#workspaces button:hover {
+    color: #E1DBDE;
+    background: #262526;
+}
+
+#mode,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#backlight,
+#custom-storage,
+#clock,
+#temperature,
+#disk {
+    margin: 5px 0px;
     padding: 5px 16px 5px 10px;
-    background: rgba(121, 123, 134, 0.1);
+    background: #1c1b1c;
     border-radius: 0px;
     min-width: 20px;
 }
 
-#pulseaudio { border-radius: 10px 0 0 10px; }
-#clock { border-radius: 0 10px 10px 0; }
+#pulseaudio {
+    border-radius: 10px 0 0 10px;
+}
 
-#window { padding: 0 100px; }
+#clock {
+    border-radius: 0 10px 10px 0;
+}
 
-#clock { margin-right: 4px; }
+#window {
+    padding: 0 100px;
+}
 
-#pulseaudio.muted { color: #a16946; }
-#pulseaudio.bluetooth { color: #86c1b9; }
-#temperature.critical { color: #a16946; }
+#clock {
+    margin-right: 4px;
+}
+
+#pulseaudio.muted {
+    color: #a16946;
+}
+
+#pulseaudio.bluetooth {
+    color: #86c1b9;
+}
+
+#temperature.critical {
+    color: #a16946;
+}
 
 /* Hacky Arch logo LOL */
 #idle_inhibitor {
