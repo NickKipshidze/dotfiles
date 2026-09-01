@@ -1,4 +1,6 @@
 hyprland                      # Wayland compositor
+hypridle
+hyprlock
 hyprpaper                     # Set wallapaper
 waybar-hyprland               # Wayland bar
 wofi                          # Application launcher
